@@ -1,0 +1,82 @@
+{
+  "cases": [
+    {
+      "id": "exact-schema",
+      "result": {
+        "actual_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "class": "exact",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "exact-schema"
+      }
+    },
+    {
+      "id": "nominal-mismatch",
+      "result": {
+        "actual_schema": "7fee3267086dcfc142287e94285f478c34862eb2fe994c6f06207c4dbce7d905",
+        "class": "migration-required",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "nominal-mismatch"
+      }
+    },
+    {
+      "id": "directional-alias",
+      "result": {
+        "actual_schema": "7fee3267086dcfc142287e94285f478c34862eb2fe994c6f06207c4dbce7d905",
+        "class": "admitted-alias",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "exact-directional-alias"
+      }
+    },
+    {
+      "id": "reverse-alias-rejected",
+      "result": {
+        "actual_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "class": "migration-required",
+        "expected_schema": "7fee3267086dcfc142287e94285f478c34862eb2fe994c6f06207c4dbce7d905",
+        "outcome": "decision",
+        "reason": "alias-mismatch"
+      }
+    },
+    {
+      "id": "migration-available",
+      "result": {
+        "actual_schema": "7fee3267086dcfc142287e94285f478c34862eb2fe994c6f06207c4dbce7d905",
+        "class": "migration-available",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "exact-migration-reference"
+      }
+    },
+    {
+      "id": "stale-migration-rejected",
+      "result": {
+        "actual_schema": "7fee3267086dcfc142287e94285f478c34862eb2fe994c6f06207c4dbce7d905",
+        "class": "migration-required",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "migration-mismatch"
+      }
+    },
+    {
+      "id": "policy-denial-wins",
+      "result": {
+        "actual_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "class": "denied",
+        "expected_schema": "faa587362daee612565efb5632f9209997946737aefd657d9f801f316dce9c88",
+        "outcome": "decision",
+        "reason": "policy-denied"
+      }
+    },
+    {
+      "id": "duplicate-member-rejected",
+      "result": {
+        "diagnostic": "duplicate member id field:value",
+        "outcome": "rejection"
+      }
+    }
+  ],
+  "schema": "schema-identity-conformance.v1"
+}

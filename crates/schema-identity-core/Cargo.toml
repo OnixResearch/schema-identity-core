@@ -1,0 +1,15 @@
+[package]
+name = "schema-identity-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "Product-neutral schema lineage, exact identity, and compatibility decisions"
+
+[dependencies]
+content-identity-core.workspace = true
+
+[lints]
+workspace = true

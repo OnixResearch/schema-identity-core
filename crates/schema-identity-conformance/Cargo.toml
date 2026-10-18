@@ -1,0 +1,17 @@
+[package]
+name = "schema-identity-conformance"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "Portable schema identity compatibility vectors"
+
+[dependencies]
+schema-identity-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true
